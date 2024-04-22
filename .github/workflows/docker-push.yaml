@@ -1,9 +1,8 @@
 name: Docker build and push
 
 on:
-  push:
-    branches:
-      - 'main'
+  repository_dispatch:
+  workflow_dispatch:
 
 env:
   PLATFORMS: ${{ vars.PLATFORMS || 'linux/amd64,linux/arm64' }}
